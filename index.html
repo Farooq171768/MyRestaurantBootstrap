@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,18 +14,39 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- External Style css -->
     <link rel="stylesheet" href="./assets/css/style.css">
-     <!-- Bootstrap Bundle JavaScript , aids in including both the Bootstrap JavaScript and the required dependencies-->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-     crossorigin="anonymous"></script>  
+    <!-- Bootstrap Bundle JavaScript , aids in including both the Bootstrap JavaScript and the required dependencies-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        function scrollToTop() {
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+            document.body.scrollTop = 0; // For Safari
+        }
+        window.onscroll = function () {
+            showScrollToTopButton();
+        };
+        function showScrollToTopButton() {
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (
+                document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
+            ) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar">  
+<body data-bs-spy="scroll" data-bs-target=".navbar">
     <!-- Navbar -->
-    <nav  id="top" class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
+    <nav id="top" class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#foot">
-                <h1 style="font-weight: bolder; color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">MyRestaurant.</h1>
+                <h1
+                    style="font-weight: bolder; color: black; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    MyRestaurant.</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +63,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
-                        <a class="nav-link" href="#reservation">Reservation</a>
+                    <a class="nav-link" href="#reservation">Reservation</a>
                     </li>
                 </ul>
                 <a href="#reservation" class="btn btn-brand">Order Online</a>
@@ -58,8 +79,8 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <h6 class="text-white">Welcome to MyRestaurant.</h6>
-                            <h1 class="display-1 my-3 fw-bold text-white">Char-grilled & flavor-filled</h1>
-                            <a href="#reservation" class="btn btn-brand">Book your table</a>
+                            <h1 class="display-1 my-3 fw-bold text-white">Flavor-filled & Crunchy-snacks</h1>
+                            <a href="#menu" class="btn btn-brand">Explore our Menu</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +121,7 @@
                         quidem. Dignissimos, asperiores molestias?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur adipisci velit corporis
                         debitis blanditiis hic, ipsam magni exercitationem ullam quibusdam a ad!</p>
-                    <a href="#menu" class="btn btn-brand">Explore Menu</a>
+                    <a href="#foot" class="btn btn-brand">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -127,7 +148,7 @@
 
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-breakfast-tab" data-bs-toggle="pill"
-                    data-bs-target="#pills-breakfast" type="button" role="tab" aria-controls="pills-breakfast"
+                        data-bs-target="#pills-breakfast" type="button" role="tab" aria-controls="pills-breakfast"
                         aria-selected="true">Breakfast</button>
                 </li>
 
@@ -543,13 +564,13 @@
                 <div class="col-lg-8">
                     <div class="row g-3">
                         <div class="form-group col-md-6">
-                            <input type="text" class="form-control" placeholder="Full name" >
+                            <input type="text" class="form-control" placeholder="Full name">
                         </div>
                         <div class="form-group col-md-6">
                             <input type="tel" class="form-control" placeholder="Phone Number">
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="date" class="form-control" placeholder="Date" >
+                            <input type="date" class="form-control" placeholder="Date">
                         </div>
                         <div class="form-group col-md-6">
                             <input type="time" class="form-control" placeholder="Time">
@@ -559,7 +580,7 @@
                                 placeholder="Meesage"></textarea>
                         </div>
                         <div class="form-group text-center col-md-12">
-                            <a href="#" class="btn btn-brand" onclick="alert('Your table is booked')">Send Message</a>
+                            <a href="#" class="btn btn-brand" onclick="alert('Your table is booked')">Book Table</a>
                         </div>
                     </div>
                 </div>
@@ -587,7 +608,8 @@
                         <h6 class="text-white mb-4">CONTACT</h6>
                         <p class="mb-1"><i class="fa fa-phone"></i> Ph:9999 9999</p>
                         <p class="mb-1"><i class="fa fa-envelope"></i> Email:enquiries@mill.co</p>
-                        <p class="mb-0"><i class="fa fa-address-card-o"></i> A: Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="mb-0"><i class="fa fa-address-card-o"></i> A: Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit.</p>
                     </div>
                     <div class="col-lg-3">
                         <h6 class="text-white mb-4"><i class="fa fa-clock-o"></i> OPENING HOURS</h6>
@@ -607,8 +629,8 @@
             </div>
         </div>
     </footer>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top" class="rounded-circle"><i class="fa fa-arrow-up"></i></button>
 
-   
 </body>
 
 </html>
