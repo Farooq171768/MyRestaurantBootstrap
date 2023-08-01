@@ -11,6 +11,10 @@ h1,h2,h3,h4,h5,h6 {
     color: #222;
 }
 
+#top{
+    background-color: beige;
+}
+
 a {
     color: #222;
     text-decoration: none;
@@ -18,7 +22,7 @@ a {
 }
 
 a:hover {
-    color: #F58d17;
+    color:red;
 }
 
 img {
@@ -65,14 +69,19 @@ section {
 }
 #reservation{
     background-color:rgb(239, 238, 238);
+    border: 2px solid #d37810;
+    border-radius: 50px;
+    margin: 100px;
 }
 /* Slider */
 .slide-1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/cover1.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../images/recipe1.jpg);
+    border-radius: 0px 0px 10px;
 }
 
 .slide-2 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/cover2.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../images/recipe2.jpg);
+    border-radius:  0px 0px 10px;
 }
 
 .carousel-control-prev,
@@ -163,9 +172,10 @@ section {
 
 /* Footer */
 footer {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/cover3.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/restaurant.jfif);
     padding-top: 120px;
     padding-bottom: 30px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .footer-top {
